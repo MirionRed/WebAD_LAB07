@@ -17,5 +17,8 @@
     </select><br>
     <input type="submit" value="Submit">
   </form>
+  <form action="select.php">
+    <input type="submit" value="View">
+  </form>
 </body>
 </html>

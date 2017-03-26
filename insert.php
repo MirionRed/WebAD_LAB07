@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
   $insert->close();
 } else {
+  //Does this even do anything at all ? lol
 }
 function input($data){
   $data = trim($data);
