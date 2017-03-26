@@ -3,10 +3,10 @@
 <head>
 </head>
 <body>
-  <h1>Main</h1>
   <?php include('connect.php'); ?>
-  <?php include('insert.php'); ?>
-  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
+  <?php include('edit.php'); ?>
+  <h1>Update</h1>
+  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]), '?id='.$_GET['id'] ?>">
     Subject:
     <input type="text" name="subject"><br>
     Message:
@@ -17,8 +17,8 @@
       <option value="T">Traffic Announcement<option>
     </select><br>
     <input type="submit" value="Submit">
-    <a href="select.php">View Table</a>
   </form>
+  <a href="index.php">Return</a>
 
 </body>
 </html>

@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if($insert->execute()===true){
     ?> <script>console.log("Record added");</script> <?php
+    ?> <script>window.alert("Record added");</script> <?php
   } else {
     ?> <script>console.log("Unable to insert record");</script> <?php
   }

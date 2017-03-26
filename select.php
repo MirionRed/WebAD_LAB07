@@ -20,19 +20,24 @@
         </tr>
       </thead>
       <tbody>
+    <?php $row_number = 1; ?>
     <?php while($select->fetch()): ?>
       <tr>
-        <td><?= $id ?></td>
+        <td><?= $row_number ?></td>
         <td><?= $subject ?></td>
         <td><?= $message ?></td>
         <td><?= $type ?></td>
         <td><?= $posted ?></td>
+        <td><a href="editForm.php?id=<?= $id ?>">edit</a><td>/
+        <td><a href="delete.php?id=<?= $id ?>">delete</a><td>
       </tr>
+    <?php $row_number++; ?>
     <?php endwhile; ?>
       </tbody>
     </table>
   <?php else: ?>
     <p>0 results</p>
   <?php endif; ?>
+  <a href="index.php">Return</a>
 </body>
 </html>
